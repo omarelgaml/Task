@@ -1,0 +1,40 @@
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: redis
+  url: redis://localhost:6379/1
+  channel_prefix: Friends!_production
+  development:
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: mydb
+pool: 5
+username: root
+password: asdfgh
+
+production:
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: mydb
+pool: 5
+username: root
+password: asdfgh
+socket: /var/run/mysqld/mysqld.sock
+
+test:
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: mydb_testing
+pool: 5
+username: root
+password: asdfgh
+socket: /var/run/mysqld/mysqld.sock
+
+
